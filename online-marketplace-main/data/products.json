@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "category": "Electronics",
+        "price": 50,
+        "stock": 15,
+        "description": "High-quality sound, Bluetooth 5.0, 20 hours of battery life.",
+        "image": "images\/items\/1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Smartwatch",
+        "category": "Electronics",
+        "price": 89,
+        "image": "images\/items\/2.jpg",
+        "description": "Fitness tracker, heart rate monitor, and water-resistant design.",
+        "stock": 10
+    },
+    {
+        "id": 3,
+        "name": "Urban Backpack",
+        "category": "Accessories",
+        "price": 35,
+        "image": "images\/items\/3.jpg",
+        "description": "Spacious backpack for laptops up to 15 inches.",
+        "stock": 20
+    },
+    {
+        "id": 4,
+        "name": "Sports Sneakers",
+        "category": "Clothing",
+        "price": 60,
+        "image": "images\/items\/4.jpg",
+        "description": "Lightweight and comfortable running sneakers.",
+        "stock": 25
+    },
+    {
+        "id": 5,
+        "name": "Coffee Machine",
+        "category": "Home Appliances",
+        "price": 120,
+        "image": "images\/items\/5.jpg",
+        "description": "Automatic coffee machine with a milk frother.",
+        "stock": 8
+    },
+    {
+        "id": 6,
+        "name": "Desk Lamp",
+        "category": "Home Appliances",
+        "price": 25,
+        "image": "images\/items\/6.jpg",
+        "description": "LED lamp with adjustable brightness.",
+        "stock": 30
+    },
+    {
+        "id": 7,
+        "name": "Cotton T-Shirt",
+        "category": "Clothing",
+        "price": 15,
+        "image": "images\/items\/7.jpg",
+        "description": "100% cotton, available in different sizes.",
+        "stock": 50
+    },
+    {
+        "id": 8,
+        "name": "Portable Speaker",
+        "category": "Electronics",
+        "price": 40,
+        "image": "images\/items\/8.jpg",
+        "description": "Bluetooth speaker with powerful bass.",
+        "stock": 18
+    }
+]

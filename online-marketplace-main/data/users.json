@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "first_name": "Margulan",
+        "last_name": "Tlek",
+        "email": "margulantlek9@gmail.com",
+        "password": "$2y$10$upPK\/fvwu5W0lrr0VnymguclIcZSA.Lcoo.NdkNLHZ6.j52Eks2Mq",
+        "phone": "87005557557",
+        "role": "user"
+    }
+]
