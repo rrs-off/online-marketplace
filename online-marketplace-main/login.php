@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
 
     if ($email === '' || $password === '') {
-        $errors[] = "Please fill in all fields";
+        $errors[] = "Барлық өрістерді толтырыңыз";
     } else {
         $users = loadData('users.json');
         $found = null;
@@ -18,9 +18,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
         if (!$found) {
-            $errors[] = "No user found with this email";
+            $errors[] = "Бұл email-мен пайдаланушы табылмады";
         } elseif (!password_verify($password, $found['password'])) {
-            $errors[] = "Incorrect password";
+            $errors[] = "Құпиясөз дұрыс емес";
+        } elseif (isset($found['status']) && $found['status'] === 'blocked') {
+            $errors[] = "Бұл есептік жазба бұғатталған. Әкімшіге хабарласыңыз.";
         } else {
             unset($found['password']);
             $_SESSION['user'] = $found;
@@ -32,10 +34,10 @@ include 'includes/header.php';
 ?>
 
 <div class="form-box">
-  <h2 style="margin-bottom:20px;">Log In to Your Account</h2>
+  <h2 style="margin-bottom:20px;">Аккаунтқа кіру</h2>
 
   <?php if (isset($_GET['registered'])): ?>
-    <div class="success-box">Registration successful. You can now log in.</div>
+    <div class="success-box">Тіркеу сәтті аяқталды. Енді кіре аласыз.</div>
   <?php endif; ?>
 
   <?php if (!empty($errors)): ?>
@@ -50,12 +52,12 @@ include 'includes/header.php';
       <input type="text" name="email" value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
     </div>
     <div class="form-group">
-      <label>Password</label>
+      <label>Құпиясөз</label>
       <input type="password" name="password">
     </div>
-    <button type="submit" class="btn" style="width:100%;">Log In</button>
+    <button type="submit" class="btn" style="width:100%;">Кіру</button>
   </form>
-  <p style="margin-top:15px; text-align:center;">Don't have an account? <a href="register.php">Register</a></p>
+  <p style="margin-top:15px; text-align:center;">Аккаунтыңыз жоқ па? <a href="register.php">Тіркеу</a></p>
 </div>
 
 <?php include 'includes/footer.php'; ?>
